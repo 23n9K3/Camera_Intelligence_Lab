@@ -1,0 +1,5 @@
+demosaic: bilinear
+gamma: 2.2
+denoise_strength: 0.5
+sharpening_strength: 0.0
+white_balance_gain: [1.0, 1.0, 1.0]

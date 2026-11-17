@@ -1,0 +1,2 @@
+retries: 1
+llm_timeout_seconds: 20

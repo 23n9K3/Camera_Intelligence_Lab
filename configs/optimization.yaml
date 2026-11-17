@@ -1,0 +1,7 @@
+trials: 8
+timeout_seconds: 30
+seed: 42
+gamma: [1.7, 2.6]
+denoise_strength: [0.0, 1.5]
+sharpening_strength: [0.0, 0.8]
+white_balance_gain: [0.8, 1.25]

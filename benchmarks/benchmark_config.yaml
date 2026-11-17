@@ -1,0 +1,3 @@
+trials: 4
+timeout_seconds: 30
+architectures: [single, single_tools, multi_agent]

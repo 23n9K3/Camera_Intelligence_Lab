@@ -1,0 +1,267 @@
+[
+  {
+    "id": "camera-01",
+    "category": "raw",
+    "kind": "comparison",
+    "request": "验证 8 位 RAW 并输出 ISP 图像",
+    "tool": "load_raw",
+    "seed": 100,
+    "depth": 8
+  },
+  {
+    "id": "camera-02",
+    "category": "raw",
+    "kind": "comparison",
+    "request": "验证 10 位 RAW 并输出 ISP 图像",
+    "tool": "load_raw",
+    "seed": 101,
+    "depth": 10
+  },
+  {
+    "id": "camera-03",
+    "category": "raw",
+    "kind": "comparison",
+    "request": "验证 12 位 RAW 并输出 ISP 图像",
+    "tool": "load_raw",
+    "seed": 102,
+    "depth": 12
+  },
+  {
+    "id": "camera-04",
+    "category": "raw",
+    "kind": "comparison",
+    "request": "验证 14 位 RAW 并输出 ISP 图像",
+    "tool": "load_raw",
+    "seed": 103,
+    "depth": 14
+  },
+  {
+    "id": "camera-05",
+    "category": "raw",
+    "kind": "comparison",
+    "request": "验证 16 位 RAW 并输出 ISP 图像",
+    "tool": "load_raw",
+    "seed": 104,
+    "depth": 16
+  },
+  {
+    "id": "camera-06",
+    "category": "bayer",
+    "kind": "comparison",
+    "request": "检查 RGGB Bayer 排布并运行 demosaic",
+    "tool": "visualize_bayer",
+    "seed": 105,
+    "pattern": "RGGB"
+  },
+  {
+    "id": "camera-07",
+    "category": "bayer",
+    "kind": "comparison",
+    "request": "检查 BGGR Bayer 排布并运行 demosaic",
+    "tool": "visualize_bayer",
+    "seed": 106,
+    "pattern": "BGGR"
+  },
+  {
+    "id": "camera-08",
+    "category": "bayer",
+    "kind": "comparison",
+    "request": "检查 GRBG Bayer 排布并运行 demosaic",
+    "tool": "visualize_bayer",
+    "seed": 107,
+    "pattern": "GRBG"
+  },
+  {
+    "id": "camera-09",
+    "category": "bayer",
+    "kind": "comparison",
+    "request": "检查 GBRG Bayer 排布并运行 demosaic",
+    "tool": "visualize_bayer",
+    "seed": 108,
+    "pattern": "GBRG"
+  },
+  {
+    "id": "camera-10",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 normal",
+    "tool": "analyze_dark_frame",
+    "seed": 109,
+    "defect": "normal"
+  },
+  {
+    "id": "camera-11",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 hot",
+    "tool": "analyze_dark_frame",
+    "seed": 110,
+    "defect": "hot"
+  },
+  {
+    "id": "camera-12",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 dead",
+    "tool": "analyze_dark_frame",
+    "seed": 111,
+    "defect": "dead"
+  },
+  {
+    "id": "camera-13",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 row",
+    "tool": "analyze_dark_frame",
+    "seed": 112,
+    "defect": "row"
+  },
+  {
+    "id": "camera-14",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 column",
+    "tool": "analyze_dark_frame",
+    "seed": 113,
+    "defect": "column"
+  },
+  {
+    "id": "camera-15",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 dsnu",
+    "tool": "analyze_dark_frame",
+    "seed": 114,
+    "defect": "dsnu"
+  },
+  {
+    "id": "camera-16",
+    "category": "sensor",
+    "kind": "sensor",
+    "request": "完成暗场与平场分析，检查坏点及 PTC，样本 prnu",
+    "tool": "analyze_dark_frame",
+    "seed": 115,
+    "defect": "prnu"
+  },
+  {
+    "id": "camera-17",
+    "category": "demosaic",
+    "kind": "comparison",
+    "request": "比较 bilinear 去马赛克输出与参考图像",
+    "tool": "run_isp_pipeline",
+    "seed": 116,
+    "algorithm": "bilinear"
+  },
+  {
+    "id": "camera-18",
+    "category": "demosaic",
+    "kind": "comparison",
+    "request": "比较 edge_adaptive 去马赛克输出与参考图像",
+    "tool": "run_isp_pipeline",
+    "seed": 117,
+    "algorithm": "edge_adaptive"
+  },
+  {
+    "id": "camera-19",
+    "category": "demosaic",
+    "kind": "comparison",
+    "request": "比较 vng 去马赛克输出与参考图像",
+    "tool": "run_isp_pipeline",
+    "seed": 118,
+    "algorithm": "vng"
+  },
+  {
+    "id": "camera-20",
+    "category": "shading",
+    "kind": "comparison",
+    "request": "执行镜头阴影校正，系数 0.25",
+    "tool": "run_isp_pipeline",
+    "seed": 119,
+    "shading": 0.25
+  },
+  {
+    "id": "camera-21",
+    "category": "shading",
+    "kind": "comparison",
+    "request": "执行镜头阴影校正，系数 0.75",
+    "tool": "run_isp_pipeline",
+    "seed": 120,
+    "shading": 0.75
+  },
+  {
+    "id": "camera-22",
+    "category": "optimization",
+    "kind": "optimization",
+    "request": "优化低照度 ISP 噪声、细节和颜色，样本 normal",
+    "tool": "finish_trial",
+    "seed": 121,
+    "defect": "normal"
+  },
+  {
+    "id": "camera-23",
+    "category": "optimization",
+    "kind": "optimization",
+    "request": "优化低照度 ISP 噪声、细节和颜色，样本 hot",
+    "tool": "finish_trial",
+    "seed": 122,
+    "defect": "hot"
+  },
+  {
+    "id": "camera-24",
+    "category": "optimization",
+    "kind": "optimization",
+    "request": "优化低照度 ISP 噪声、细节和颜色，样本 mixed",
+    "tool": "finish_trial",
+    "seed": 123,
+    "defect": "mixed"
+  },
+  {
+    "id": "camera-25",
+    "category": "iq",
+    "kind": "comparison",
+    "request": "计算 PSNR、SSIM 和 ΔE00",
+    "tool": "evaluate_image_quality",
+    "seed": 124
+  },
+  {
+    "id": "camera-26",
+    "category": "iq",
+    "kind": "comparison",
+    "request": "无参考条件下评估均匀 ROI 噪声",
+    "tool": "evaluate_image_quality",
+    "seed": 125,
+    "no_reference": true
+  },
+  {
+    "id": "camera-27",
+    "category": "hdr",
+    "kind": "hdr",
+    "request": "进行 HDR 曝光融合",
+    "tool": "hdr_fusion",
+    "seed": 126
+  },
+  {
+    "id": "camera-28",
+    "category": "burst",
+    "kind": "burst",
+    "request": "进行 Burst 多帧降噪",
+    "tool": "burst_average",
+    "seed": 127
+  },
+  {
+    "id": "camera-29",
+    "category": "report",
+    "kind": "sensor",
+    "request": "生成暗场 Sensor 实验报告",
+    "tool": "generate_experiment_report",
+    "seed": 128
+  },
+  {
+    "id": "camera-30",
+    "category": "report",
+    "kind": "comparison",
+    "request": "生成 ISP 对比报告并导出 CSV",
+    "tool": "export_experiment_csv",
+    "seed": 129
+  }
+]
